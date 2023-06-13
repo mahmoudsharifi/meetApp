@@ -111,3 +111,29 @@ Scenario 1: Show a chart with the number of upcoming events in each city
 **Given** the user has not selected a city
 **When** the user wants to compare events between cities
 **Then** they should be able to access a chart with the number of upcoming events in each city
+
+# Project Name
+
+Brief description of the project.
+
+## How this app will use serverless functions
+
+### Feature 1: Filter events by city
+
+For this feature, the app utilizes a serverless function to handle the filtering logic on the backend. When the user searches for a city, the frontend triggers the serverless function with the search query. The function retrieves the list of events from the API, filters them based on the city, and returns the filtered results to the frontend.
+
+### Feature 2: Show/Hide event details
+
+Serverless functions are not necessary for this feature as it primarily involves client-side interactivity. The show/hide functionality can be implemented using JavaScript and DOM manipulation on the client-side.
+
+### Feature 3: Specify the number of events
+
+Similar to Feature 1, a serverless function is used to handle the logic of fetching and filtering events based on the specified number. The frontend triggers the function with the desired number of events, and the function retrieves the appropriate number of events from the database or API. The retrieved events are then returned to the frontend for display.
+
+### Feature 4: Use the app when offline
+
+To enable offline functionality, the app utilizes caching and local storage mechanisms. These mechanisms allow the app to store essential data locally, allowing users to access and use the app even when they are not connected to the internet.
+
+### Feature 5: Data Visualization
+
+For data visualization purposes, the app employs serverless functions to generate the chart data. When a user requests a chart, the frontend triggers a serverless function that fetches the necessary data from the API. The function then performs any required calculations or transformations on the data and returns the processed data to the frontend for rendering and visualization.
