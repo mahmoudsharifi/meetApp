@@ -160,3 +160,17 @@ module.exports.getCalenderEvents = (event) => {
       }
     })
 }
+
+module.exports.getTest = async (event) => {
+  // const oAuth2Client = new OAuth2(client_id, client_secret, redirect_uris[0]);
+  const token = decodeURIComponent(`${event.pathParameters.access_token}`)
+  console.log({ token })
+  // oAuth2Client.setCredentials({ access_token });
+  return {
+    statusCode: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+    body: JSON.stringify({ token }),
+  }
+}
