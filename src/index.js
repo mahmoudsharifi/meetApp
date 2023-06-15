@@ -5,6 +5,10 @@ import App from './App'
 import * as atatus from 'atatus-spa'
 atatus.config('6e420ff6d8514e53af96a797fa4a9e4c').install()
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
 
-atatus.notify(new Error('Test Atatus Setup'))
+  document.getElementById('root')
+)
